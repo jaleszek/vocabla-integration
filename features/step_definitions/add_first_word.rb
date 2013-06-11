@@ -4,8 +4,7 @@ include ExcelReader
 LOCATOR = YAML.load_file("config/locators.yml")
 
 Given(/^(.*?)" User visits "(.*?)$/) do |userType, page|
-  # visit ENV_URL
-  visit 'http://www.onet/pl'
+  visit ENV_URL
 
   sleep 5
  end
@@ -34,20 +33,21 @@ When(/^User types "(.*?)" and clicks "(.*?)" button$/) do |word, addWord|
 end
 
 Then(/^User gets number of people who added this word$/) do
-  count = find(LOCATOR['number_of_ppl']).text
+  count = find(LOCATOR['number_of_pp']).text
   should have_content("#{count} people added this word")
 end
 
 Then(/^User gets "(.*?)" translation$/) do |translation|
-  assert_selector(LOCATOR['translation'],:text=> translation)
+  find(LOCATOR['translation'],:text=> translation)
 end
 
 Then(/^User gets: Main list as target list$/) do
-  assert_selector(LOCATOR['main_list'],:text=> 'Main list')
+  find(LOCATOR['main_list'],:text=> 'Main list')
 end
 
 Then(/^User is redirected to the same page, but with yellow successful message$/) do
- assert_selector(LOCATOR['yellow_alert'],:text=> "New word #{$word} is now added to Main list list")
+ find(LOCATOR['yellow_alert'],:text=> "New word #{$word} is now added to Main list list")
+ debugger
  find(LOCATOR['ok']).click
 end
 
@@ -56,6 +56,6 @@ When(/^User clicks "(.*?)" from the menu$/) do |list_Menu|
 end
 
 Then(/^User gets "(.*?)" "(.*?)" pair on the list$/) do |word, gato|
-  assert_selector(LOCATOR['memo_word_value'],:text=> word)
+  find(LOCATOR['memo_word_value'],:text=> word)
   should have_css(LOCATOR['memo_word_definition'])
 end

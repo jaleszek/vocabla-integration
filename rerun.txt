@@ -1,1 +1,1 @@
-features/AddFirstWord.feature:3:24 features/UserOperatesOnList.feature:3 features/UsersFirstTest.feature:3 features/WordTranslation.feature:3
+features/AddFirstWord.feature:3:24

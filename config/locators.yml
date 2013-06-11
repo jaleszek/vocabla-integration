@@ -13,10 +13,10 @@
   first_row_number: 2
   password: 12345678
   new_word: div[id='navigation-column']>ul>li[class='dashboard-icon-addword']>a
-  translation: div[class='memowords_definition_val']>span
+  translation: '.memowords_definition_val span'
   main_list: div[class='change_translation_list']
   ok: div[class='alert alert-notice ']>button[type='close']
-  yellow_alert: div[class='alert alert-notice ']>span
+  yellow_alert: '.alert-notice span'
   list_menu: div[id='navigation-column']>ul>li:nth-child(2)>a
   memo_word_value: div[id='memo_words'] * div[class='td word_value']>span
   memo_word_definition: div[id='memo_words'] * div[class='td word_definition']
