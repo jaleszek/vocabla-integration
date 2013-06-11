@@ -38,7 +38,7 @@ Then(/^User gets number of people who added this word$/) do
 end
 
 Then(/^User gets "(.*?)" translation$/) do |translation|
-  find(LOCATOR['translation'],:text=> translation)
+  find(LOCATOR['translation'])
 end
 
 Then(/^User gets: Main list as target list$/) do
@@ -46,8 +46,7 @@ Then(/^User gets: Main list as target list$/) do
 end
 
 Then(/^User is redirected to the same page, but with yellow successful message$/) do
- find(LOCATOR['yellow_alert'],:text=> "New word #{$word} is now added to Main list list")
- debugger
+ find(LOCATOR['yellow_alert'])
  find(LOCATOR['ok']).click
 end
 

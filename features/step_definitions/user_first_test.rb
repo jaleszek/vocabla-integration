@@ -77,19 +77,19 @@ Then(/^User should see "(.*?)" on the left hand side$/) do |txt|
 end
 
 Then(/^User should see five possible answers along with "(.*?)"$/) do |correct_ans|
-  assert_no_selector(LOCATOR['first_option'],:text=>'dog')
-  assert_no_selector(LOCATOR['second_option'],:text=>'dog')
-  assert_no_selector(LOCATOR['third_option'],:text=>'dog')
-  assert_no_selector(LOCATOR['fourth_option'],:text=>'dog')
+  first(  LOCATOR['first_option'],:text=>'dog').should == nil
+  first(  LOCATOR['second_option'],:text=>'dog').should == nil
+  first(  LOCATOR['third_option'],:text=>'dog').should == nil
+  first(  LOCATOR['fourth_option'],:text=>'dog').should == nil
   if has_xpath?("//div[@id='quiz']/div[1]//div[@class='answers']/ul/li[@class='btn-answer correct']/p[text()='dog']")
-    assert_selector(LOCATOR['correct_option'],:text=>correct_ans)
+    find(  LOCATOR['correct_option'],:text=>correct_ans)
   else
-    assert_selector(LOCATOR['correct_option'],:text=>'-- None from above --')
+    find(  LOCATOR['correct_option'],:text=>'-- None from above --')
   end
 end
 
 When(/^User selects a wrong option$/) do
-  find(LOCATOR['wrong_answer']).click
+  find(  LOCATOR['wrong_answer']).click
 end
 
 Then(/^User should be redirected to Congrats Screen$/) do
