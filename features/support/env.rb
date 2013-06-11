@@ -2,7 +2,6 @@ require 'selenium-webdriver'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
-require 'capybara-screenshot'
 require 'yaml'
 require 'writeexcel'
 
