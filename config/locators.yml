@@ -1,0 +1,57 @@
+
+  home_Page_URL: http://vocabla.com/lp/welcome.html?
+  sel_lang_Page_URL: http://vocabla.com/user_languages/8314/edit
+  sign_out: div[id='application-header-right']>a:nth-child(3)
+  dashBoard_page: http://vocabla.com/dashboard
+  sign_up_page: http://vocabla.com/users/sign_up
+  login_page: http://vocabla.com/users/sign_in
+  login: input[value='Log-in']
+  sign_up_stripe: div[class='stripe-signup']
+  start_here: img[class='start_here']
+  facebook: www.facebook.com
+  register: input[name='commit']
+  first_row_number: 2
+  password: 12345678
+  new_word: div[id='navigation-column']>ul>li[class='dashboard-icon-addword']>a
+  translation: div[class='memowords_definition_val']>span
+  main_list: div[class='change_translation_list']
+  ok: div[class='alert alert-notice ']>button[type='close']
+  yellow_alert: div[class='alert alert-notice ']>span
+  list_menu: div[id='navigation-column']>ul>li:nth-child(2)>a
+  memo_word_value: div[id='memo_words'] * div[class='td word_value']>span
+  memo_word_definition: div[id='memo_words'] * div[class='td word_definition']
+  number_of_pp: div[class='memowords_count']>strong
+  today_points: div[id='stat_box_container']>div:nth-child(1) * div[class='stat-blue']
+  total_points: div[id='stat_box_container']>div:nth-child(2) * div[class='stat-blue']
+  daily_rank: div[id='stat_box_container']>div:nth-child(3) * div[class='stat-blue']
+  points_left: div[class='points_left']>span
+  percent: div[class='blue_percent']
+  word_from_main_list: div[id='memo_words']>div:nth-child(1) * input
+  activity_stream: div[class='activity_stream']
+  points: div[class='blue_percent']
+  delete_words: span[id='delete_words']
+  do_test: div[id='not_enough_words'] * a:nth-child(1)
+  next_test: a[id='btn-do_a_test']
+  finish_test: a[id='btn-finish_training']
+  test_screen_finish: a[class='btn btn-app btn-small right finish_test']
+  correct_answer: li[class='btn-answer correct']>p
+  wrong_answer: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer']:nth-child(1)>p
+  correct_option: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer correct']>p
+  dashboard: li[class='active dashboard-icon-memo_words']
+  first_option: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer']:nth-child(1)>p
+  second_option: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer']:nth-child(2)>p
+  third_option: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer']:nth-child(3)>p
+  fourth_option: div[id='quiz']>div:nth-child(1) * div[class='answers']>ul>li[class='btn-answer']:nth-child(4)>p
+  list_text_field: word_list[name]
+  start_here: img[class='start_here']
+  number_of_words_in_list: li[class='active'] * div[class='list-count']
+  first_suggested_word: div[class='table']>div:nth-child(1)>a
+  second_suggested_word: div[class='table']>div:nth-child(2)>a
+  third_suggested_word: div[class='table']>div:nth-child(3)>a
+  fourth_suggested_word: div[class='table']>div:nth-child(4)>a
+  fifth_suggested_word: div[class='table']>div:nth-child(5)>a
+  close_test: a[id='btn-finish_training']
+  change_translation: a[class='get_edit_form']
+  own_trans_txt_field: memo_words_builder_stub[definition_value]
+  second_trans: div[class='change_translation_form hide']>div:nth-child(3)
+  third_trans: div[class='available_definition']:nth-child(3)
