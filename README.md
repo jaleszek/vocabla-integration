@@ -1,3 +1,3 @@
 vocabla-integration
 ===================
-https://api.travis-ci.org/jaleszek/vocabla-integration.png
+<img src='https://api.travis-ci.org/jaleszek/vocabla-integration.png'/>
