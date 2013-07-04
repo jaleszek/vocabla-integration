@@ -17,7 +17,7 @@ When(/^User adds (\d+) suggested words$/) do |n_words|
   within(".mcarousel") do
     n_words.to_i.times do
       click_link "+ Add word"
-      sleep 3
+      sleep 2
     end
   end
 end

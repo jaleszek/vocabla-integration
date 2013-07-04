@@ -69,22 +69,11 @@ end
 
 When(/^User chooses "(.*?)"$/) do |language|
   uri = URI.parse(current_url)
-  case language
-    when 'Spanish'
-      lang_id = 3
-    when 'Chineese'
-      lang_id = 5
-    when 'Arabic'
-      lang_id = 4
-    when 'Polish'
-      lang_id = 2
-    when 'English'
-      lang_id = 1
-  end
   if uri.query.include?("exp=C")
     uri.query.gsub!("exp=C", "exp=B")
     visit uri.to_s
   end
+  lang_id = LOCATOR[language.capitalize]
   page.find(:xpath, "//li[@data-definitions_language_id='#{lang_id.to_s}']").click
   # following code should select language in third layout of selection form, somehow hidden fields interrupts it
   # unless uri.query.include?("exp=C")
