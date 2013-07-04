@@ -4,6 +4,7 @@ include Helper
 
 #load yml
 LOCATOR = YAML.load_file("config/locators.yml")
+LANGUAGE = YAML.load_file("config/languages.yml")
 Given(/^User visits "(.*?)"$/) do |page|
   visit ENV_URL
 end
@@ -73,7 +74,7 @@ When(/^User chooses "(.*?)"$/) do |language|
     uri.query.gsub!("exp=C", "exp=B")
     visit uri.to_s
   end
-  lang_id = LOCATOR[language.capitalize]
+  lang_id = LANGUAGE[language.capitalize]
   page.find(:xpath, "//li[@data-definitions_language_id='#{lang_id.to_s}']").click
   # following code should select language in third layout of selection form, somehow hidden fields interrupts it
   # unless uri.query.include?("exp=C")
