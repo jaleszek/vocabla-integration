@@ -5,11 +5,10 @@ Given "English User" logged in
 When User clicks New word button
 	And User types "dog" and clicks "Add word" button
 	And User clicks "Save word" button
-	And User clicks on all five suggested words
-	And User clicks "Show different words" button
-	And User clicks on all five suggested words
+	And User adds 15 suggested words
 	And User clicks "Lists" from the menu
-Then User gets total 11 words in the list menu along with "dog"
+Then User should see: "You have more than 15 words"
+	And User gets total 16 words in the list menu along with "dog"
 When User navigates to dashboard
-Then number of "11 new words" should be displayed in activity stream
-	And "+22 points" should be displayed in activity stream
+Then number of "16 new words" should be displayed in activity stream
+	And "+32 points" should be displayed in activity stream

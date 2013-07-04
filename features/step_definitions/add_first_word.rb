@@ -1,7 +1,6 @@
 require_relative 'helper/ExcelReader'
 require 'yaml'
 include ExcelReader
-LOCATOR = YAML.load_file("config/locators.yml")
 
 Given(/^(.*?)" User visits "(.*?)$/) do |userType, page|
   visit ENV_URL
