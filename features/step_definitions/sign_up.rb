@@ -1,4 +1,3 @@
-
 require_relative 'helper/helper_file'
 require 'yaml'
 include Helper
@@ -26,12 +25,12 @@ When(/^User clicks? "(.*?)" button$/) do |button|
       sleep 5
     end
   when 'Register'
-    page.find(LOCATOR['register']).click
+    click_button 'Register'
     if has_content?('Email has already been taken')==true
      steps %{
        When User fills right "email"
-  And User fills right "password"
-When User clicks "Register" button
+       And User fills right "password"
+       When User clicks "Register" button
      }      
     end
   when 'Sign out'
@@ -69,8 +68,37 @@ When(/^User fills right "(.*?)"$/) do |field|
 end
 
 When(/^User chooses "(.*?)"$/) do |language|
-  page.find(:xpath,"//div[@class='language-cont'][2]//div[@class='ltit' and contains(text(),'"+language.capitalize+"')]").click
+  uri = URI.parse(current_url)
+  case language
+    when 'Spanish'
+      lang_id = 3
+    when 'Chineese'
+      lang_id = 5
+    when 'Arabic'
+      lang_id = 4
+    when 'Polish'
+      lang_id = 2
+    when 'English'
+      lang_id = 1
+  end
+  if uri.query.include?("exp=C")
+    uri.query.gsub!("exp=C", "exp=B")
+    visit uri.to_s
+  end
+  page.find(:xpath, "//li[@data-definitions_language_id='#{lang_id.to_s}']").click
+  # following code should select language in third layout of selection form, somehow hidden fields interrupts it
+  # unless uri.query.include?("exp=C")
+  #   page.find(:xpath, "//li[@data-definitions_language_id='#{lang_id.to_s}']").click
+  # else
+  #   within '#select_languages' do
+  #     page.find(:xpath, "//option[@data-definitions_language_id='#{lang_id.to_s}']").select_option
+  #   end
+  #   sleep 1
+  #   click_link "Start!"
+  # end
 end
+
+
 
 Then(/^User sees "(.*?)" image$/) do |start_here|
   sleep 5

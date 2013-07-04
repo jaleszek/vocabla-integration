@@ -1,6 +1,6 @@
 
   home_Page_URL: http://vocabla.com/lp/welcome.html?
-  sel_lang_Page_URL: http://vocabla.com/user_languages/8314/edit
+  #sel_lang_Page_URL: http://vocabla.com/user_languages/8314/edit
   sign_out: div[id='application-header-right']>a:nth-child(3)
   dashBoard_page: http://vocabla.com/dashboard
   sign_up_page: http://vocabla.com/users/sign_up

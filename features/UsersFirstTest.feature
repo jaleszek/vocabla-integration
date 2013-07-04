@@ -11,8 +11,6 @@ Then the points today should be greater than zero
 	And "You added words: dog" should be displayed in Activity Stream
 	And number of points displayed in Activity Stream should be greater than zero
 When User clicks on "Play & learn" button
-Then User should see "You have only 1 word."
-When User clicks on "Do a test" button
 	And User should see "a member of the genus Canis" on the left hand side
 
 # TODO: FIX, not working because of deprecated Capybara method assert_selector used step definitions
