@@ -55,3 +55,4 @@
   own_trans_txt_field: memo_words_builder_stub[definition_value]
   second_trans: div[class='change_translation_form hide']>div:nth-child(3)
   third_trans: div[class='available_definition']:nth-child(3)
+

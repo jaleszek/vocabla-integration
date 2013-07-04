@@ -2,7 +2,7 @@ source :rubygems
 gem "diff-lcs", "~>1.1.2"
 gem "cucumber", "~>1.2.1"
 
-gem "selenium-webdriver", "~> 2.30.0"
+gem "selenium-webdriver", "~> 2.33.0"
 gem "rspec", "~>2.6.0"
 gem "selenium-client", "~> 1.2.18"
 gem "capybara", "~> 1.1.2"
